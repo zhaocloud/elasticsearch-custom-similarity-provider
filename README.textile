@@ -17,6 +17,9 @@ curl -XPOST 'http://host:port/tweeter/' -d '
   }
 }'
 </pre> 
-
+or default in elasticsearch.yml
+<pre>
+index.similarity.default.type: org.elasticsearch.index.similarity.CustomSimilarityProvider
+</pre>
 Enjoy
 
