@@ -12,15 +12,14 @@ import org.elasticsearch.index.settings.IndexSettings;
  * @author tlrx
  *
  */
-public class CustomSimilarityProvider extends AbstractSimilarityProvider<CustomSimilarity> {
+public class CustomSimilarityProvider extends AbstractSimilarityProvider {
 
 	private CustomSimilarity similarity;
 
 	@Inject
-	public CustomSimilarityProvider(Index index,
-			@IndexSettings Settings indexSettings, @Assisted String name,
+	public CustomSimilarityProvider(@Assisted String name,
 			@Assisted Settings settings) {
-		super(index, indexSettings, name);
+		super(name);
 		this.similarity = new CustomSimilarity();
 	}
 
