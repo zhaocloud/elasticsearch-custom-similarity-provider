@@ -33,7 +33,7 @@ public class CustomSimilarity extends DefaultSimilarity {
 		} else {
 			numTerms = state.getLength();
 		}
-		if (state.getName().indexOf("auctionName") != -1) {
+		if (state.getName().indexOf("title") != -1) {
 			return (float) (0.1 * Math.log(numTerms));
 		}
 		return state.getBoost();
